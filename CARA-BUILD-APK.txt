@@ -1,0 +1,20 @@
+KARAENG FC - CARA MEMBUAT FILE APK
+
+Cara 1: lewat GitHub (gratis, tanpa install apa-apa)
+1. Buat akun / login di github.com, lalu buat repository baru (boleh Private).
+2. Upload SEMUA isi folder ini (termasuk folder .github) ke repository itu.
+   Paling mudah dari laptop: "Add file" > "Upload files", lalu seret seluruh isi folder.
+3. Buka tab "Actions" di repository. Proses "Build APK" berjalan otomatis (sekitar 3-5 menit).
+4. Setelah centang hijau, buka bagian "Releases" di halaman repository,
+   unduh KaraengFC.apk langsung dari HP.
+5. Pasang di HP: buka file KaraengFC.apk > izinkan "Instal aplikasi tidak dikenal".
+
+Cara 2: lewat Android Studio (di laptop)
+1. Buka folder ini dengan Android Studio (File > Open).
+2. Tunggu sinkronisasi selesai, lalu menu Build > Build App Bundle(s) / APK(s) > Build APK(s).
+3. File APK ada di app/build/outputs/apk/debug/app-debug.apk.
+
+Catatan
+- Data tersimpan di HP. Gunakan "Unduh cadangan" di tab Rekap untuk memindahkan data.
+- Gambar PNG tersimpan di galeri (folder Pictures/Karaeng FC), PDF di Download/Karaeng FC.
+- Font gaya kuas, unduh PDF, dan QR lokasi butuh internet saat pertama dipakai.
