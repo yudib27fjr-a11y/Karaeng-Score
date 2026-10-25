@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q "$(ls *.zip | head -1)"
+      - run: unzip -oq "$(ls *.zip | head -1)"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -19,9 +19,14 @@ jobs:
           gradle-version: "8.7"
       - run: gradle assembleDebug --no-daemon
         working-directory: KaraengFC-Android
-      - run: cp KaraengFC-Android/app/build/outputs/apk/debug/app-debug.apk KaraengFC.apk
+      - run: |
+          cp KaraengFC-Android/app/build/outputs/apk/debug/app-debug.apk KaraengFC.apk
+          cp KaraengFC-Android/app/src/main/assets/index.html index.html
+          cp KaraengFC-Android/native-version.txt native-version.txt
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
           name: Karaeng FC ${{ github.run_number }}
-          files: KaraengFC.apk
+          files: |
+            KaraengFC.apk
+            index.html
