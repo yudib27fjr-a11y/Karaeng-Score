@@ -18,6 +18,9 @@ padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-r
 .top img{width:46px;height:46px;border-radius:50%;background:#fff}
 .top h1{font-family:var(--display);font-weight:900;font-size:26px;margin:0;line-height:1;text-transform:uppercase;white-space:nowrap}
 .top h1 em{font-style:normal;color:var(--red)}
+.top .sub .by{color:#ff6a63;letter-spacing:.08em;font-weight:700;text-transform:none;font-style:italic}
+.copy{text-align:center;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.copy b{color:#fff}
 .top .sub{font-size:12px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
 .status{margin-left:auto;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px;color:var(--muted)}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
@@ -61,9 +64,10 @@ padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-r
 </style></head>
 <body>
 <div class="wrap">
-  <div class="top"><img id="crest" alt=""><div><h1>Karaeng <em>FC</em></h1><div class="sub">Live score</div></div><div class="status" id="st"><span class="dot"></span><span id="stt">Menghubungkan…</span></div></div>
+  <div class="top"><img id="crest" alt=""><div><h1>Karaeng <em>FC</em></h1><div class="sub">Live score · <span class="by">by Yudsky</span></div></div><div class="status" id="st"><span class="dot"></span><span id="stt">Menghubungkan…</span></div></div>
   <div id="main"><div class="wait">Menunggu data pertandingan dari PJ bola…</div></div>
   <div class="foot" id="upd"></div>
+  <div class="copy">© 2026 Karaeng FC · <b>by Yudsky</b></div>
 </div>
 <div class="toast" id="toast" hidden>GOOOL! ⚽</div>
 <script>
